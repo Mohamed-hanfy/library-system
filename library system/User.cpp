@@ -24,4 +24,5 @@ User::User(const User&user)
 	age = user.age;
 	password = user.password;
 	email = user.password;
+
 }
