@@ -24,5 +24,51 @@ User::User(const User&user)
 	age = user.age;
 	password = user.password;
 	email = user.password;
-
+	id = user.id;
 }
+//seters&&geters
+void User::setName(string name_)
+{
+	name = name_;
+}
+string User::getName() const
+{
+	return name;
+}
+void User::setPassword(string password_)
+{
+	password = password_;
+}
+string User::getPassword() const
+{
+	return password;
+}
+void User::setEmail(string email_)
+{
+	email = email_;
+}
+string User::getEmail() const
+{
+	return string();
+}
+void User::setAge(int age_)
+{
+	age = age_;
+}
+int User::getAge()
+{
+	return age;
+}
+void User::setId(int id_)
+{
+	id = id_;
+}
+int User::getId()
+{
+	return id;
+}
+void User::Display()
+{
+}
+
+
