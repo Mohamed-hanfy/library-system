@@ -17,6 +17,7 @@ class User
         User(string name, int age, string password, string email);
         User(const User&);
         bool operator==(const User& user);
+        //Seters&&geters
         void setName(string name_);
         string getName() const;
         void setPassword(string password_);
@@ -26,8 +27,11 @@ class User
         void setAge(int age_);
         int getAge();
         void setId(int id_);
-        int getId();
+        int getId()const;
+        //
+
         void Display();
+
         friend ostream& operator<<(ostream&, const User&);
         friend istream& operator>>(istream&, User&);
     };

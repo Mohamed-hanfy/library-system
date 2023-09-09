@@ -26,6 +26,13 @@ User::User(const User&user)
 	email = user.password;
 	id = user.id;
 }
+bool User::operator==(const User& user)
+{
+	if (name != user.name || email != user.email || age != user.age || id != user.id) {
+		return false;
+	}
+	return true;
+}
 //seters&&geters
 void User::setName(string name_)
 {
@@ -63,12 +70,18 @@ void User::setId(int id_)
 {
 	id = id_;
 }
-int User::getId()
+int User::getId() const
 {
 	return id;
 }
 void User::Display()
 {
+	cout << "***************************" << '\n';
+	cout << "Name --> " << name << '\n';
+	cout << "Age --> " << age << '\n';
+	cout << "ID --> " << id << '\n';
+	cout << "Email --> " << email << '\n';
+	cout << "***************************" << '\n';
 }
 
 
