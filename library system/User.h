@@ -32,7 +32,7 @@ class User
 
         void Display();
 
-        friend ostream& operator<<(ostream&, const User&);
-        friend istream& operator>>(istream&, User&);
+        friend ostream& operator<<(ostream&output, const User&user);
+        friend istream& operator>>(istream&intput, User&user);
     };
 

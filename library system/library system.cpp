@@ -6,6 +6,7 @@ int main()
 {
 	User u1;
 	User u2=u1;
-	u1.Display();
+	cin >> u1;
+	cout << u1;
 	
 }

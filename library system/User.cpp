@@ -84,4 +84,20 @@ void User::Display()
 	cout << "***************************" << '\n';
 }
 
+ostream &operator<<(ostream&output, const User&user)
+{
+	output << "=========User " << user.id << " info=========" << '\n';
+	output << "Name : " << user.name;
+	output << "| Age : " << user.age;
+	output << "|Email : " << user.email << endl;
+	return output;
+}
 
+
+istream &operator>>(istream&input, User&user)
+{
+	cout << "Enter the user information in this order" << '\n';
+	cout << "Name Age Email Password ";
+	input >> user.name >> user.age >> user.email >> user.password;
+	return input;
+}
