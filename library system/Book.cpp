@@ -107,7 +107,7 @@ ostream& operator<<(ostream& output, const Book& book)
 	output << " | Category : " << book.category;
 	output << " | Avg Rating : " << book.averageRating << '\n';
 	if (book.author.getName() != "") {
-		output <<"| author : " << "book.author";
+		output <<" author  " <<'\n'<<book.author;
 	}
 	cout << '\n';
 	cout << "=============================" << '\n';

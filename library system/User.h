@@ -31,7 +31,7 @@ class User
         //
 
         void Display();
-
+       // void operator=(const User& user);
         friend ostream& operator<<(ostream&output, const User&user);
         friend istream& operator>>(istream&intput, User&user);
     };

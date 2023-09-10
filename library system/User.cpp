@@ -84,6 +84,17 @@ void User::Display()
 	cout << "***************************" << '\n';
 }
 
+/*
+void User::operator=(const User& user)
+{
+	name = user.name;
+	age = user.age;
+	password = user.password;
+	email = user.email;
+}
+*/
+
+
 ostream &operator<<(ostream&output, const User&user)
 {
 	output << "=========User " << user.getId() << " info=========" << '\n';
