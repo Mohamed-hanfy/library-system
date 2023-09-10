@@ -13,11 +13,13 @@ private:
 		int numRates;
 		double sumRates;
 		double averageRating;
+		bool hasAuthor;
 
-		User author;
+		User *author;
 public:
 		static int count;
 		Book();
+		~Book();
 		Book(string title, string isbn, string category);
 		Book(const Book&);
 		void setTitle(string title_);
