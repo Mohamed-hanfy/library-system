@@ -25,7 +25,7 @@ class User
         void setEmail(string email_);
         string getEmail()const;
         void setAge(int age_);
-        int getAge();
+        int getAge() const;
         void setId(int id_);
         int getId()const;
         //

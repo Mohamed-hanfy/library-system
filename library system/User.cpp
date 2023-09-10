@@ -56,13 +56,13 @@ void User::setEmail(string email_)
 }
 string User::getEmail() const
 {
-	return string();
+	return email;
 }
 void User::setAge(int age_)
 {
 	age = age_;
 }
-int User::getAge()
+int User::getAge() const
 {
 	return age;
 }
@@ -86,10 +86,10 @@ void User::Display()
 
 ostream &operator<<(ostream&output, const User&user)
 {
-	output << "=========User " << user.id << " info=========" << '\n';
-	output << "Name : " << user.name;
-	output << "| Age : " << user.age;
-	output << "|Email : " << user.email << endl;
+	output << "=========User " << user.getId() << " info=========" << '\n';
+	output << "Name : " << user.getName();
+	output << " | Age : " << user.getAge();
+	output << " |Email : " << user.getEmail() << '\n';
 	return output;
 }
 
