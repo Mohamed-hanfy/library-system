@@ -18,6 +18,7 @@ UserList::UserList(int capacity):capacity(capacity)
 void UserList::addUser(User& user)
 {
 	users[usersCount] = user;
+	users[usersCount].setId(usersCount + 1);
 	usersCount++;
 }
 
@@ -41,5 +42,35 @@ User* UserList::searchUser(int id)
 		}
 	}
 	return nullptr;
-	return nullptr;
+}
+
+void UserList::deleteUser(int id)
+{
+	for (int i = 0; i < usersCount; i++)
+	{
+		if (users[i].getId() == id) {
+			while (i<usersCount-1)
+			{
+				users[i] = users[i + 1]; 
+				i++;
+			}
+			
+		}
+		usersCount--;
+		break;
+	}
+}
+
+UserList::~UserList()
+{
+	delete[] users;
+}
+
+ostream& operator<<(ostream& output, const UserList& userlist)
+{
+	for (int i = 0; i < userlist.usersCount; i++)
+	{
+		output << userlist.users[i]<<" ";
+	}
+	return output;
 }

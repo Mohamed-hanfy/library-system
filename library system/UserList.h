@@ -17,7 +17,7 @@ public:
         void addUser(User& user);
         User* searchUser(string name);
         User* searchUser(int id);
-        void deleteUser(int);
-        friend ostream& operator<<(ostream&, const UserList&);
+        void deleteUser(int id);
+        friend ostream& operator<<(ostream& output, const UserList&userlist);
         ~UserList();
 };
