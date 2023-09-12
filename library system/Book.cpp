@@ -67,6 +67,11 @@ string Book::getIsbn() const
 	return isbn;
 }
 
+void Book::setId(int id_)
+{
+	id = id_;
+}
+
 int Book::getId() const
 {
 	return id;

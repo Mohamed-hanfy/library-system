@@ -26,6 +26,7 @@ public:
 		string getTitle() const;
 		void setIsbn(string isbn_);
 		string getIsbn() const;
+		void setId(int id_);
 		int getId() const;
 		void setCategory(string category_);
 		string getCategory()const;

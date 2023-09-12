@@ -14,14 +14,14 @@ private:
 public:
 		BookList();
 		BookList(int capacity);
-		void addBook(const Book&book); // at the end of the array.
+		void addBook(const Book&book); 
 		Book* searchBook(string name);
 		Book* searchBook(int id);
-		void deleteBook(int id); //delete a book
+		void deleteBook(int id); 
 		Book getTheHighestRatedBook();
-		void getBooksForUser(const User&); // get all books of this author
-		Book& operator[] (int);
-		friend ostream& operator<<(ostream& output, const BookList& booklist); //to display all books
+		void getBooksForUser(const User& user); 
+		Book& operator[] (int idx);
+	 	friend ostream& operator<<(ostream& output, const BookList& booklist);
 		~BookList();
 	};
 
