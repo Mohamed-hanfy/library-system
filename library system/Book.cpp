@@ -10,7 +10,7 @@ Book::Book()
 	id = count;
 	numRates = 0;
 	sumRates = 0.0;
-	hasAuthor = false;
+//	hasAuthor = false;
 	User author;
 	
 }
@@ -40,11 +40,7 @@ Book::Book(const Book& book)
 	averageRating = book.averageRating;
 	numRates = book.numRates;
 	sumRates = book.sumRates;
-	if (book.hasAuthor) {
-		//author = new User;
-		hasAuthor = true;
-		setAuthor(book.author);
-	}
+	author=	book.author;
 }
 
 void Book::setTitle(string title_)
@@ -89,7 +85,7 @@ string Book::getCategory() const
 
 void Book::setAuthor(const User& user)
 {
-	hasAuthor = true;
+	//hasAuthor = true;
 	author = user;
 }
 
@@ -123,7 +119,7 @@ ostream& operator<<(ostream& output, const Book& book)
 	output << " | isbn : " << book.isbn;
 	output << " | Category : " << book.category;
 	output << " | Avg Rating : " << book.averageRating << '\n';
-	if (book.hasAuthor) {
+	if (book.getAuthor().getName() != "") {
 		output <<" author  " <<'\n'<<(book.author);
 	}
 	cout << '\n';

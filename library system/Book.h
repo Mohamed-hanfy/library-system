@@ -13,7 +13,7 @@ private:
 		int numRates;
 		double sumRates;
 		double averageRating;
-		bool hasAuthor;
+		//bool hasAuthor;
 
 		User author;
 public:
