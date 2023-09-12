@@ -17,7 +17,7 @@ Book::Book()
 
 Book::~Book()
 {
-	delete author;
+	//delete author;
 }
 
 Book::Book(string title, string isbn, string category) :
@@ -41,9 +41,9 @@ Book::Book(const Book& book)
 	numRates = book.numRates;
 	sumRates = book.sumRates;
 	if (book.hasAuthor) {
-		author = new User;
+		//author = new User;
 		hasAuthor = true;
-		setAuthor(*book.author);
+		setAuthor(book.author);
 	}
 }
 
@@ -85,12 +85,12 @@ string Book::getCategory() const
 void Book::setAuthor(const User& user)
 {
 	hasAuthor = true;
-	author = new User(user);
+	author = user;
 }
 
 User Book::getAuthor() const
 {
-	return *author;
+	return author;
 }
 
 void Book::rateBook(double rating)
@@ -119,7 +119,7 @@ ostream& operator<<(ostream& output, const Book& book)
 	output << " | Category : " << book.category;
 	output << " | Avg Rating : " << book.averageRating << '\n';
 	if (book.hasAuthor) {
-		output <<" author  " <<'\n'<<*(book.author);
+		output <<" author  " <<'\n'<<(book.author);
 	}
 	cout << '\n';
 	cout << "=============================" << '\n';

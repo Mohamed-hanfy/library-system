@@ -15,7 +15,7 @@ private:
 		double averageRating;
 		bool hasAuthor;
 
-		User *author;
+		User author;
 public:
 		static int count;
 		Book();
